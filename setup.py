@@ -8,7 +8,7 @@ def read(f):
             return ""
 
 setup(name='shellvars-py',
-      version='0.1.0',
+      version='0.1.1',
       description='Read environment variables defined in a shell script into Python.',
       author_email='aneil.mallavar@gmail.com',
       license='Apache2',
