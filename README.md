@@ -11,13 +11,16 @@ multiline variables.
 Given a shell file: myvars.env:
 
 ```shell
-VAR1=1
-VAR2="This
+#!/bin/bash
+export VAR1=1
+export VAR2="This
 is
 a
 multiline value"
-VAR3=3
+export VAR3=3
+NOT_EXPORTED=4
 ```
+
 
 ## get_vars
 
