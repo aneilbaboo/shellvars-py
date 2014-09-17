@@ -2,7 +2,10 @@ from setuptools import setup
 
 def read(f):
     with open(f) as file:
-        return file.read()
+        try:
+            return file.read()
+        except:
+            return ""
 
 setup(name='shellvars-py',
       version='0.1.0',
