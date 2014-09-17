@@ -1,14 +1,14 @@
 from setuptools import setup
 
 def read(f):
-    with open(f) as file:
-        try:
+    try:
+        with open(f) as file:
             return file.read()
-        except:
-            return ""
+    except:
+        return ""
 
 setup(name='shellvars-py',
-      version='0.1.1',
+      version='0.1.2',
       description='Read environment variables defined in a shell script into Python.',
       author_email='aneil.mallavar@gmail.com',
       license='Apache2',
