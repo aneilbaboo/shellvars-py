@@ -1,0 +1,12 @@
+# sample .rvmrc file which sets up/activates a virtualenv when cd'ing into the directory
+if hash mkvirtualenv 2>/dev/null; then
+    virtualenv_name=$(basename `pwd`)
+    workon "$virtualenv_name"
+    if [ "$?" != "0" ]; then
+        mkvirtualenv "$virtualenv_name"
+        echo "\"pip install -r requirements.txt\" to install libraries"
+    fi
+    if [ -f ".env" ]; then
+        source .env
+    fi
+fi
